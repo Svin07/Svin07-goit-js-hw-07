@@ -21,12 +21,9 @@ const addImages = galleryItems.map(item =>
 
 elementsList.insertAdjacentHTML('beforeend', addImages);
 
-elementsList.addEventListener('click', onClick);
+// elementsList.addEventListener('click', onClick);
 
-function onClick(evt) {
-  evt.preventDefault();
-  if (evt.target.nodeName !== 'IMG')
-  return;
+
 
   const lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250});
-}
+

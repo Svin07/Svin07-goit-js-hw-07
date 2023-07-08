@@ -39,12 +39,12 @@ function onClick(evt) {
     
 );
 
-instance.show();
-elementsList.addEventListener('keydown', onEscClose);
+instance.show(() => document.addEventListener('keydown', onEscClose));
+
 
 function onEscClose(evt) {
   if (evt.code === 'Escape')
-  instance.close();
+  instance.close(() => document.removeEventListener('keydown', onEscClose));
 }
 }
 

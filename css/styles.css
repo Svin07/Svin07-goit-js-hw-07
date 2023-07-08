@@ -9,7 +9,9 @@
   display: grid;
   grid-template-columns: repeat(3, 200px);
   align-content: center;
+  grid-gap: 16px;
   height: 100vh;
+  list-style: none;
  
 }
 
